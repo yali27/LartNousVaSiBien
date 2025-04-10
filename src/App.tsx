@@ -1,35 +1,60 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from "./Components/Header/Header";
+import Card from "./Components/Cards/Cards";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <h1>L'art nous va si bien !</h1>
+      <main className="cards-container">
+
+
+        <figure className="card">
+          <figcaption>Pablo Picasso</figcaption>
+          <img
+            src="https://cdn.pixabay.com/photo/2022/03/30/14/49/art-7101291_1280.png"
+            alt="Picasso"
+            className="card-image"
+          />
+
+          <button onClick={() => alert('Découvrez les œuvres de Picasso')}>
+            Explorer
+          </button>
+
+        </figure>
+
+        <figure className="card">
+          <figcaption>Salvador Dali</figcaption>
+          <img
+            src="https://cdn.pixabay.com/photo/2024/04/28/21/13/ai-generated-8726341_1280.png"
+            alt="Dali"
+            className="card-image"
+          />
+
+          <button onClick={() => alert('Explorez l\'univers surréaliste de Dali')}>
+            Explorer
+          </button>
+
+        </figure>
+
+        <figure className="card">
+          <figcaption>Gustav Klimt</figcaption>
+          <img
+            src="https://cdn.pixabay.com/photo/2019/07/24/02/30/klimt-4359075_1280.jpg"
+            alt="Klimt"
+            className="card-image"
+          />
+
+          <button onClick={() => alert('Admirez les chefs-d\'œuvre de Klimt')}>
+            Explorer
+          </button>
+
+        </figure>
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+
+export default App;
