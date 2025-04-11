@@ -48,3 +48,39 @@
     color: #c471f8;
     /* La couleur change après 3 secondes */
 }
+
+.logout-button {
+    background-color: rgb(247, 209, 209);
+    /* Couleur rose pour le fond */
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* Forme ronde */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centre l'image */
+}
+
+.logout-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Ajuste l'image */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.logout-button:hover {
+    background-color: rgb(247, 180, 180);
+    /* Couleur plus foncée au survol */
+}
+
+.logout-button:hover img {
+    transform: scale(1.1);
+    /* Zoom léger au survol */
+    opacity: 0.8;
+}
