@@ -12,7 +12,7 @@ const router = createBrowserRouter([
         path: "/create-account", // Route pour la page Créer un compte
         element: (
             <>
-                <Header /> {/* Header visible sur la page Créer un compte */}
+                <Header handleLogout={() => { /* Fonction vide pour le placeholder */ }} />
                 <CreateAccount />
             </>
         ),
